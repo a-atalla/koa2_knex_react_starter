@@ -1,12 +1,14 @@
 const Router = require('koa-router')
 const router = new Router()
 const queries = require('../db/queries/movies')
+require('dotenv').config()
 
 // TODO: apply the same pattern as oasis-backend for passing baseUrl
 const BASE_URL = '/api/v1/movies'
-
+console.log('*****', process.env.DB_HOST)
 router.get(BASE_URL, async (ctx) => {
   try {
+    console.log(process.env.DB_HOST)
     const allMovies = await queries.getAllMovies()
     ctx.body = {
       status: 'success',

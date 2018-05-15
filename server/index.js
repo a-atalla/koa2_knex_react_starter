@@ -5,6 +5,8 @@ const morgan = require('koa-morgan')
 const moviesRoutes = require('./routes/movies')
 const app = module.exports = new Koa()
 
+require('dotenv').config()
+console.log(process.env.DB_HOST)
 // TODO: Apply passport auth
 let PORT = 3030
 
