@@ -3,8 +3,8 @@ const chai = require('chai')
 const should = chai.should()
 const chaiHttp = require('chai-http')
 chai.use(chaiHttp)
-const server = require('../src/server/index')
-const knex = require('../src/server/db/connection')
+const server = require('../index')
+const knex = require('../db/connection')
 
 describe('routes : movies', () => {
   beforeEach(() => {

@@ -4,8 +4,10 @@ const chai = require('chai')
 const should = chai.should()
 const chaiHttp = require('chai-http')
 
+// TODO: replace mocha and chai with jest 
+
 chai.use(chaiHttp)
-const server = require('../src/server/index')
+const server = require('../index')
 
 describe('routes : index', () => {
   describe('GET /', () => {

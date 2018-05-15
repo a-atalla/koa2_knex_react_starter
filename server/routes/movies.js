@@ -1,6 +1,8 @@
 const Router = require('koa-router')
 const router = new Router()
 const queries = require('../db/queries/movies')
+
+// TODO: apply the same pattern as oasis-backend for passing baseUrl
 const BASE_URL = '/api/v1/movies'
 
 router.get(BASE_URL, async (ctx) => {
@@ -11,6 +13,7 @@ router.get(BASE_URL, async (ctx) => {
       data: allMovies
     }
   } catch (err) {
+    // TODO: Apply error handler middleware
     console.log(err)
   }
 })
