@@ -4,7 +4,7 @@ const bodyParser = require('koa-bodyparser')
 const morgan = require('koa-morgan')
 const moviesRoutes = require('./routes/movies')
 const app = module.exports = new Koa()
-
+// TODO: add eslint, editorconfig
 require('dotenv').config()
 console.log(process.env.DB_HOST)
 // TODO: Apply passport auth

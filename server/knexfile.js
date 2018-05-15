@@ -4,10 +4,7 @@ const BASE_PATH = path.join(__dirname, 'db')
 
 module.exports = {
   development: {
-    // client: 'pg',
     client: 'sqlite3',
-
-    // connection: 'postgres://username:password@localhost:5432/movies',
     connection: {
       filename: path.join(BASE_PATH, 'articles.db')
     },
@@ -21,10 +18,7 @@ module.exports = {
   },
 
   test: {
-    // client: 'pg'
     client: 'sqlite3',
-
-     // connection: 'postgres://username:password@localhost:5432/movies',
     connection: {
       filename: path.join(BASE_PATH, 'articles_test.db')
     },
