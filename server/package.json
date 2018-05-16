@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./server/index.js",
-    "db:reset": "knex migrate:latest && knex seed:run",
+    "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
     "test": "_mocha --exit"
   },
   "keywords": [],

@@ -6,7 +6,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(BASE_PATH, 'articles.db')
+      filename: path.join(BASE_PATH, 'app.db')
     },
     useNullAsDefault: true,
     migrations: {
@@ -20,7 +20,7 @@ module.exports = {
   test: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(BASE_PATH, 'articles_test.db')
+      filename: path.join(BASE_PATH, 'app_test.db')
     },
     useNullAsDefault: true,
     migrations: {
