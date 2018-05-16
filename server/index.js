@@ -2,7 +2,7 @@ const Koa = require('koa')
 const serve = require('koa-static')
 const bodyParser = require('koa-bodyparser')
 const morgan = require('koa-morgan')
-const moviesRoutes = require('./routes/movies')
+const usersRoutes = require('./routes/users')
 const app = module.exports = new Koa()
 // TODO: add eslint, editorconfig
 require('dotenv').config()
@@ -15,7 +15,7 @@ if (process.NODE_ENV === 'test') {
 }
 app.use(morgan('dev')) // dev, short, tiny, common, combined
 app.use(bodyParser())
-app.use(moviesRoutes.routes())
+app.use(usersRoutes.routes())
 
 if (process.env.NODE_ENV === 'production') {
   // serve react build in production

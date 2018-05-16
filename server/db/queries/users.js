@@ -9,7 +9,7 @@ const getUserById = (userId) => {
   return knex('users').select('*').where({id: parseInt(userId)})
 }
 const addUser = (user) => {
-  return knex('user').insert(user).returning('*')
+  return knex('users').insert(user).returning('*')
 }
 
 
